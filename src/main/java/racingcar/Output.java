@@ -1,0 +1,29 @@
+package racingcar;
+
+import java.util.List;
+
+public class Output {
+    public void printStartMessage() {
+        System.out.println("\n실행 결과");
+    }
+
+    public void printRoundResult(List<Car> cars) {
+        for (Car car : cars) {
+            System.out.println(formatCar(car));
+        }
+        System.out.println();
+    }
+
+    private String formatCar(Car car) {
+        StringBuilder positionBar= new StringBuilder();
+        for(int i=0;i<car.getPosition();i++)
+            positionBar.append('-');
+        return car.getName() + " : " + positionBar;
+    }
+
+    public void printWinners(List<String> winners) {
+        String winnerNames = String.join(", ",winners);
+
+        System.out.println("최종 우승자 : " + winnerNames);
+    }
+}
