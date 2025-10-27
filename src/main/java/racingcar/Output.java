@@ -15,14 +15,14 @@ public class Output {
     }
 
     private String formatCar(Car car) {
-        StringBuilder positionBar= new StringBuilder();
-        for(int i=0;i<car.getPosition();i++)
+        StringBuilder positionBar = new StringBuilder();
+        for (int i = 0; i < car.getPosition(); i++)
             positionBar.append('-');
         return car.getName() + " : " + positionBar;
     }
 
     public void printWinners(List<String> winners) {
-        String winnerNames = String.join(", ",winners);
+        String winnerNames = String.join(", ", winners);
 
         System.out.println("최종 우승자 : " + winnerNames);
     }

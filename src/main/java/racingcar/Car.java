@@ -8,19 +8,19 @@ public class Car {
     public Car(String name, Moving moving) {
         this.name = name;
         this.moving = moving;
-        position=0;
+        position = 0;
     }
 
-    public int getPosition(){
+    public int getPosition() {
         return position;
     }
 
-    public String getName(){
+    public String getName() {
         return name;
     }
 
     public void moveForward() {
-        if(moving.canMove()){
+        if (moving.canMove()) {
             this.position++;
         }
     }

@@ -8,8 +8,8 @@ public class Splitter {
     private final static String delimiter = ",";
     private final Moving moving;
 
-    public Splitter(Moving moving){
-        this.moving=moving;
+    public Splitter(Moving moving) {
+        this.moving = moving;
     }
 
     public List<Car> convertList(String cars) {
@@ -17,9 +17,9 @@ public class Splitter {
         String[] splitter = cars.split(delimiter);
 
         for (String car : splitter) {
-            car=car.trim();
+            car = car.trim();
             checkLength(car);
-            carList.add(new Car(car,moving));
+            carList.add(new Car(car, moving));
         }
 
         return carList;
